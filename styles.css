@@ -253,6 +253,37 @@ section {
     color: gold;
 }
 
+.footer a {
+    color: gold;
+    font-weight: 600;
+    transition: 0.5s ease;
+}
+
+.footer a:hover {
+    color: green;
+    background-color: gold;
+    box-shadow: 0 0 25px gold;
+}
+
+.footer-social-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.footer-social-icons a {
+    display: inline-flex;
+    justify-content: center;
+    width: 50px;
+    font-size: 30px;
+    color: gold;
+    margin: 0px 10px 20px 30px;
+    transition: 0.5s ease;
+    border-radius: 100px;
+    box-shadow: 0 0 25px gold;
+}
+
 /* About Section Styles */
 
 .about {

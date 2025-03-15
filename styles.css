@@ -111,7 +111,6 @@ section {
 
 .home-img{
     width: 40%;
-    border-radius: 50%;
 }
 
 .home-img img{
@@ -364,4 +363,9 @@ section {
     font-weight: 700;
     margin-bottom: 20px;
     color: gold;
+}
+
+.contact img{
+    width: 60%;
+    border-radius: 50%;
 }

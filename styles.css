@@ -74,8 +74,8 @@ nav {
 
 nav a{
     color: white;
-    font-size: 30px;
-    font-weight: 400;
+    font-size: 25px;
+    font-weight: 600;
     margin: 0 10px; 
     cursor: pointer;
     border-bottom: 3px solid transparent;
@@ -198,12 +198,24 @@ section {
 
 /* Service Section Styles */
 
+.service-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+}
+
 .service-title h1 {
     font-size: 50px;
     font-weight: 600;
     margin-bottom: 100px;
     color: gold;
     text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-top: 20px;
+    padding: 20px;
 }
 
 .service-title h1:hover {
@@ -219,11 +231,14 @@ section {
 }
 
 .services-container {
+    margin: 0 auto;
     display: grid; /* Use grid layout */
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid */
-    gap: 20px; /* Space between grid items */
+    grid-template-columns: repeat(2, 1fr); /* Two columns */
+    gap: 20px;
+    max-width: 1200px; /* Set a max width for the container */
+    margin: 0 auto; /* Center the container */
     padding: 20px;
-    justify-content: center; /* Center the grid */
+    justify-items: center; 
 }
 
 .service-card {
@@ -237,7 +252,7 @@ section {
     margin: 0 auto;
     margin-top: 20px;
     cursor: pointer;
-    flex: 1 1 calc(33.333% - 40px);
+    flex: 1 1 calc(33% - 20px);
     box-sizing: border-box;
     padding: 20px;
     text-align: center;
@@ -347,8 +362,7 @@ footer {
 }
 
 .about-img img{
-    width: 25%;
-    border-radius: 50%;
+    width: 35%;
 }
 
 .about-content h1{
@@ -399,8 +413,7 @@ footer {
     margin-top: 100% 90% 100% 100%;
     background-color: black;
     color: gold;
-    padding: 50px;
-
+    padding: 20px;
 }
 
 /* Contact Section Styles */

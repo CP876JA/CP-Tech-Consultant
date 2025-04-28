@@ -442,7 +442,7 @@ footer {
 
 .input-box {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
     margin-top: 20px;
 }
@@ -450,26 +450,34 @@ footer {
 .input-box input, 
 .input-box textarea {
     width: 40%; 
-    padding: 8px 15px; 
-    margin: 8px 0; 
+    padding: 10px 15px;
+    margin: 12px 0; 
     border-radius: 30px;
     border: 1px solid green;
     font-size: 14px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease; 
+}
+
+.input-box input:focus, 
+.input-box textarea:focus {
+    border-color: gold; 
+    box-shadow: 0 0 10px gold; 
+    outline: none; 
 }
 
 .sub-btn {
-    padding: 8px 15px; 
-    font-size: 14px;
+    padding: 10px 20px;
+    font-size: 16px;
     cursor: pointer;
     background-color: white;
-    box-shadow: 0 0 15px gold; /* Reduced shadow size */
+    box-shadow: 0 0 15px gold;
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .sub-btn:hover {
-    transform: scale(1.05);
+    transform: scale(1.1); 
     background-color: gold;
     color: black;
-    transition: 0.4s ease;
     font-weight: 600;
 }
 

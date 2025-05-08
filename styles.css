@@ -1,4 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+html {
+    scroll-behavior: smooth;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -186,10 +191,11 @@ section {
 }
 
 .btn:hover {
-    transform: scale(1.05);
+    transform: scale(1.1);
     background-color: gold;
     color: black;
     transition: 0.4s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
 .occupation{
@@ -204,6 +210,8 @@ section {
     align-items: center;
     text-align: center;
     flex-direction: column;
+    margin: 0 auto;
+    width: 100%;
 }
 
 .service-title h1 {
@@ -258,6 +266,7 @@ section {
     text-align: center;
     border: 1px solid #ddd;
     border-radius: 8px;
+    animation: fadeIn 1s ease-in-out;
 }
 
 .service-card i {
@@ -288,8 +297,8 @@ section {
 }
 
 .service-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 6px 25px rgba(10, 185, 4, 0.1);
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
 .service-card:hover i {
@@ -306,7 +315,7 @@ section {
 
 footer {
     text-align: center;
-    padding: 10px;
+    padding: 20px;
     background-color: #f8f8f8;
 }
 
@@ -320,14 +329,12 @@ footer {
 
 .footer a {
     color: gold;
-    font-weight: 600;
-    transition: 0.5s ease;
 }
 
 .footer a:hover {
     color: green;
-    background-color: gold;
-    box-shadow: 0 0 25px gold;
+    text-decoration: underline;
+    transition: 0.4s ease;
 }
 
 .footer-social-icons {
@@ -355,14 +362,38 @@ footer {
 /* About Section Styles */
 
 .about {
+    margin-top: 20px;
     width: 100%;
     padding: 60px 20px;
     text-align: center;
     background-color: #f4f4f9;
+    background-image: url('images/image_fx_-1-2.jpg'); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+    display: flex;
+    justify-content: center;
+    opacity: 0.9;
 }
 
-.about-img img{
-    width: 35%;
+.about::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;    
+    z-index: 1; /* Place it behind the content */
+}
+
+.about-content {
+    position: relative;
+    z-index: 2;
+    background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent overlay for content */
+    padding: 20px;
+    border-radius: 10px;
+    display: inline-block;
 }
 
 .about-content h1{
@@ -382,7 +413,7 @@ footer {
 .about-content p{
     font-size: 20px;
     font-weight: 400;
-    color: black;
+    color: white;
     letter-spacing: 2px;
 }
 
@@ -519,3 +550,25 @@ footer {
     }
 }
 
+@media (max-width: 768px) {
+    .service-title h1 {
+        font-size: 40px; 
+        margin-bottom: 50px;
+    }
+
+    .services-container {
+        grid-template-columns: 1fr; 
+        gap: 15px;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

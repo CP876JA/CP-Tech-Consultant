@@ -3,27 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Connect Digital Tech Consultants - Empowering Your Business with Digital Expertise.">
+    <meta name="keywords" content="Tech Consultants, IT Services, Web Design, Camera Installation, Network Solutions">
     <title>Connect Digital Tech Consultants</title>
     <link rel="stylesheet" href="styles.css">
     <link href=https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
 </head>
-<body>
+<body id="home">
     <header>
         <a href="index.html" class="logo">
             <img src="images/Connect Digital.png" alt="logo">
         </a>
 
-        <nav>
-            <a data-active="Home" href="index.html">Home</a>
-            <a data-active="About" href="aboutus.html">About</a>
-            <a data-active="Contact" href="contactus.html">Contact</a>
-        </nav>
+        <nav class="navbar" id="navbar">
+                <a href="index.html" data-active="index">Home</a>
+                <a href="aboutus.html" data-active="aboutus">About</a>
+                <a href="contactus.html" data-active="contactus">Contact</a>
+            </div>        
     </header>
 
     <section class="home">
         <div class="home-img">
-            <img src="images/tech-man-min.jpg" alt="profile picture">
+            <img src="images/tech-man-min.jpg" alt="A man working with technology">
         </div>
         <div class="home-content">
             <h1>Welcome to <span class="name"><br> Connect Digital Tech Consultants</span></h1>
@@ -32,19 +34,17 @@
             </p>
             <div class="social-icons">
                 <a href="#"><i class="fa-brands fa-instagram" alt="Instagram"></i></a>
-                <a href="#"><i class="fa-brands fa-linkedin" alt="LinkedIn"></i></a>
-                <a href="#"><i class="fa-brands fa-facebook" alt="Facebook"></i></a>
             </div>
             <a href="contactus.html" class="btn">Hire Us</a>
         </div>
     </section>
 
     <section class="services-container">
-        <div class="service-title"><h1>IT Services</h1></div>
-        <div class="service-card">
+        <div class="service-title"><h1>IT Services</h1></div>        
+        <div class="service-card">        
             <i class="fa-solid fa-laptop"></i>
-            <h3>Computer Repairs</h3>
-            <p>We offer fast, reliable, and professional computer repair services to fix any issues, from hardware malfunctions to software troubleshooting, ensuring your devices are back up and running in no time.</p>
+            <h3>Repair Services</h3>
+            <p>We offer expert computer repair services, including hardware and software troubleshooting, virus removal, data recovery and system optimization. Other repair services including printer repair and UPS battery replacements</p>
             </div>
         </div>
             
@@ -58,17 +58,17 @@
 
         <div class="services">
             <div class="service-card">
-                <i class="fa-solid fa-globe"></i>
-                <h3>Web Design</h3>
-                <p>Designing of websites to meet the needs of clients</p>
+            <i class="fa-solid fa-microchip"></i>
+            <h3>IT Network Solutions</h3>
+            <p>We provide comprehensive IT support services, including troubleshooting, maintenance, and network management, ensuring your technology runs smoothly and efficiently.</p>
             </div>
         </div>
 
         <div class="services">
             <div class="service-card">
-            <i class="fa-solid fa-microchip"></i>
-            <h3>IT Network Solutions</h3>
-            <p>We deliver reliable and secure networking solutions tailored to your business needs. From structured cabling to full network setup and support, we ensure your systems run smoothly and efficiently.</p>
+                <i class="fa-solid fa-globe"></i>
+                <h3>Web Design</h3>
+                <p>Designing of websites to meet the needs of clients</p>
             </div>
         </div>
         </section> 
@@ -77,8 +77,6 @@
         <div class="footer"><p>&copy; All rights reserved to Digital Connect Digital Tech Consultants 2025</p>
         <div class="footer-social-icons">
             <a href="#"><i class="fa-brands fa-instagram" alt="Instagram"></i></a>
-            <a href="#"><i class="fa-brands fa-linkedin" alt="LinkedIn"></i></a>
-            <a href="#"><i class="fa-brands fa-facebook" alt="Facebook"></i></a>
         </div>
         </div>
     </footer> 

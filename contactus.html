@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
     <link href=https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
 </head>
@@ -19,47 +20,53 @@
                 <a data-active="About" href="aboutus.html">About</a>
                 <a data-active="Contact" href="contactus.html">Contact</a>
             </nav>
-        </header>
-<section>
-    
+    </header>
 
-    <div class="contact-img">
-        <img src="images/contact-us-button.jpg" alt="Profile Picture">
+    <section class="contact">
+        <div class="contact-content">
+            <h1>Contact Us</h1>
+            <p>We'd love to hear from you! Reach out to us for any inquiries or support.</p>
+            <form action="https://api.web3forms.com/submit" method="post" class="contactus-form" onsubmit="showThankYouMessage(event)" >
+                <input type="hidden" name="access_key" value="1a797b90-c549-4d97-aa47-72dfbb85178d">
+                <div class="input-box">
+                    <input type="text" placeholder="Your Name" required>
+                    <input type="email" placeholder="Your Email" required>
+                    <textarea placeholder="Your Message" required></textarea>
+                </div>
+                <button type="submit" class="sub-btn">Send Message</button>
+            </form>
+            <p id="thank-you-message" style="display: none; color: green; margin-top: 20px;">Thank you for reaching out! We'll get back to you soon.</p>
         </div>
-        <br><br>
-        <p class="form-p">For all your tech-related needs, we are here to help. Reach out to us today for personalized, professional services!</p>
-        <br><br>
+    </section>
 
-        <form action="https://api.web3forms.com/submit" method="post" class="contactus-form">
-            <input type="hidden" name="access_key" value="1a797b90-c549-4d97-aa47-72dfbb85178d">           
-            <div class="input-box">
-                    <input type="text" name="Full Name" placeholder="Full-Name">
-            </div>
-
-            <div class="input-box">
-                    <input type="email" name="Email" placeholder="Your Email">
-            </div>
-
-            <div class="input-box">
-                    <input type="text" name="Phone Number" placeholder="Phone Number">
-            </div>
-
-            <div class="input-box">
-                    <textarea name="Message" placeholder="Your Message"></textarea>
-                    <input type="hidden" name="redirect" value="https://web3forms.com/success">
-                    <input type="submit" value="Send Message" class="sub-btn">
-            </div>
-        </form>
+    <section class="follow-us">
+    <h2>Follow Us</h2>
+    <div class="social-icons-contact">
+        <a href="https://www.instagram.com" target="_blank" class="social-icons-contact">
+            <i class="fa-brands fa-instagram"></i>
+        </a>
+    </div>
 </section>
 
+    <script>
+        function showThankYouMessage(event) {
+            event.preventDefault(); // Prevent the default form submission
+            document.getElementById('thank-you-message').style.display = 'block'; // Show the thank you message
+            setTimeout(() => {
+                document.getElementById('thank-you-message').style.display = 'none'; // Hide the message after 3 seconds
+            }, 3000);
+        }
+    </script>
 
 <footer>   
-    <div class="footer"><p>&copy; All rights reserved to Connect Digital Tech Consultants 2025</p>
-    <div class="footer-social-icons">
-        <a href="#"><i class="fa-brands fa-instagram" alt="Instagram"></i></a>
-    </div>
+    <div class="footer">
+        <p><br />&copy; All rights reserved to Connect Digital Tech Consultants 2025</p>
+        <div class="footer-social-icons">
+            <a href="#"><i class="fa-brands fa-instagram" alt="Instagram"></i></a>
+        </div>
     </div>
 </footer>
 
 </body>
 </html>
+    

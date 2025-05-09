@@ -40,8 +40,9 @@ header {
     left: 0;
     width: 100%;
     padding: 20px 50px 0 50px;
-    background-color: green;
+    background: linear-gradient(to bottom, rgb(252, 219, 37), rgb(5, 180, 5), white); 
     display: flex;
+    background-color: #ffcc00;
     justify-content: space-between;
     align-items: center;
     z-index: 100;
@@ -77,11 +78,11 @@ nav {
     flex-wrap: wrap;
 }
 
-nav a{
+nav a {
     color: white;
     font-size: 25px;
     font-weight: 600;
-    margin: 0 10px; 
+    margin: 0 15px; 
     cursor: pointer;
     border-bottom: 3px solid transparent;
     transition: 0.5s ease;
@@ -98,7 +99,10 @@ nav a.active {
 }
 */
 /* Home Content Section Styles */
+
 section {
+    width: 100%;
+    height: 100vh;
     padding: 200px;
     text-align: center;
 }
@@ -111,6 +115,7 @@ section {
     flex-wrap: wrap;
     justify-content: center;
     padding: 20px;
+    margin-top: 0px;
 }
 
 .home .home-content h1 {
@@ -129,6 +134,7 @@ section {
     align-items: center;
     text-align: center;
     max-width: 600px;
+    padding: 80px;
 }
 
 .home-content h3{
@@ -307,22 +313,20 @@ section {
 
 /* Footer Styles */
 .footer {
-    background-color: black;
+    background: linear-gradient(to top, black, rgb(48, 138, 48), white);
     text-align: center;
     position: relative;
-    bottom: 100%;  
-}
-
-footer {
+    bottom: 0;
+    left: 0;
+    width: 100%;
     text-align: center;
-    padding: 20px;
-    background-color: #f8f8f8;
+    color: white;
 }
 
 .footer p {
     padding: 20px 0;
     margin: 0;
-    font-size: 15px;
+    font-size: 16px;
     font-weight: 400;
     color: gold;
 }
@@ -332,7 +336,7 @@ footer {
 }
 
 .footer a:hover {
-    color: green;
+    color: gold;
     text-decoration: underline;
     transition: 0.4s ease;
 }
@@ -352,7 +356,7 @@ footer {
     justify-content: center;
     width: 50px;
     font-size: 30px;
-    color: gold;
+    color: black;
     margin: 0px 10px 20px 30px;
     transition: 0.5s ease;
     border-radius: 100px;
@@ -449,6 +453,39 @@ footer {
 
 /* Contact Section Styles */
 
+.contact {
+    width: 100%;
+    padding: 60px 20px;
+    text-align: center;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/flat-lay-workstation-with-copy-space-laptop.jpg'); /* Add a gradient overlay */
+    background-color: #f4f4f9; /* Fallback color */
+    background-size: cover; /* Ensure the image covers the entire section */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+    color: white; /* Ensure text is readable */
+    position: relative;
+}
+
+.contact::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Add a semi-transparent overlay */
+    z-index: 1; /* Place it behind the content */
+}
+
+.contact-content {
+    position: relative;
+    z-index: 2; /* Ensure content is above the overlay */
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.6); /* Optional: Add a semi-transparent background for content */
+    border-radius: 10px;
+    display: inline-block;
+}
+
 .contact-img {
     display: flex;
     justify-content: center;
@@ -512,53 +549,94 @@ footer {
     font-weight: 600;
 }
 
+.follow-us {
+    text-align: center;
+    margin: 30px 0px 20px 0px;
+    padding: 300px 20px;
+    background-color: #f4f4f9;
+    background-image: url('images/wooden-block-cube-with-symbol-email-address.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+}
+
+.follow-us h2 {
+    font-size: 32px;
+    color: white; /* Changed to white for better contrast */
+    margin-bottom: 20px;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5); /* Added text shadow for readability */
+}
+
+.social-icons-contact {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.social-icons-contact a {
+    font-size: 30px;
+    color: gold;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-icons a:hover {
+    transform: scale(1.2);
+    color: green;
+    background-color: gold;
+}
+
 /* Media queries for smaller screens */
 @media (max-width: 768px) {
+    .home-content {
+        padding: 40px; /* Reduce padding for smaller screens */
+    }
+
+    .home-img {
+        width: 50%; /* Adjust image size for smaller screens */
+    }
+
+    .input-box input, 
+    .input-box textarea {
+        width: 80%; /* Increase input width for better usability */
+    }
+
+    .follow-us {
+        padding: 100px 20px; /* Reduce padding for the "Follow Us" section */
+    }
+
+    .follow-us h2 {
+        font-size: 24px; /* Adjust font size for smaller screens */
+    }
+
+    .social-icons-contact a {
+        font-size: 24px; /* Reduce icon size */
+    }
+
     .service-card {
-        flex: 1 1 calc(50% - 20px);
+        margin: 10px auto; /* Reduce margins for service cards */
     }
 
-    nav {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .home {
-        flex-direction: column;
+    .contact-content {
+        padding: 20px; /* Reduce padding for the contact section */
     }
 }
 
 @media (max-width: 480px) {
-    .service-card {
-        flex: 1 1 100%;
+    .home-content h3 {
+        font-size: 40px; /* Adjust heading size for very small screens */
     }
 
-    header .logo img {
-        max-width: 120px;
+    .home-img {
+        width: 70%; /* Further adjust image size */
     }
 
-    .home-content h1 {
-        font-size: 1.5rem;
+    .follow-us {
+        padding: 80px 10px; /* Further reduce padding */
     }
 
-    .home-content h2 {
-        font-size: 1.2rem;
-    }
-
-    .home-content p {
-        font-size: 0.9rem;
-    }
-}
-
-@media (max-width: 768px) {
-    .service-title h1 {
-        font-size: 40px; 
-        margin-bottom: 50px;
-    }
-
-    .services-container {
-        grid-template-columns: 1fr; 
-        gap: 15px;
+    .social-icons-contact a {
+        font-size: 20px; /* Further reduce icon size */
     }
 }
 

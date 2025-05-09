@@ -17,4 +17,14 @@ for (let link of links) {
         }
         this.classList.add('active');
     });
+
+    function showThankYouMessage(event) {
+        event.preventDefault(); // Prevent the default form submission
+        const form = document.querySelector('.contactus-form');
+        const thankYouMessage = document.getElementById('thank-you-message');
+
+        // Hide the form and show the thank-you message
+        form.style.display = 'none';
+        thankYouMessage.style.display = 'block';
+    }
 }

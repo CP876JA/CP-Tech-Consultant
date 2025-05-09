@@ -328,7 +328,9 @@ section {
     margin: 0;
     font-size: 16px;
     font-weight: 400;
-    color: gold;
+    color: black;
+    margin: 20px 0;
+    text-shadow: 0 0 5px gold;
 }
 
 .footer a {
@@ -379,6 +381,16 @@ section {
     display: flex;
     justify-content: center;
     opacity: 0.9;
+}
+
+.about-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    margin: 3rem auto;
+    width: 100%;
 }
 
 .about::before {
@@ -439,16 +451,6 @@ section {
     background-color: gold;
     color: black;
     transition: 0.4s ease;
-}
-
-.about-footer{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 100% 90% 100% 100%;
-    background-color: black;
-    color: gold;
-    padding: 20px;
 }
 
 /* Contact Section Styles */
